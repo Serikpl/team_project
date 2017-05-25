@@ -24,6 +24,10 @@ return array(
 	'best' => 'store/best',	
 	'store' => 'store/index',	
 
+	//static pages
+	'contact' => 'static/contact',
+	'aboutus' => 'static/aboutus',
+
 	// 
 	'' => 'start/index' // default/start uri
 );

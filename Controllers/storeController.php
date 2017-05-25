@@ -28,8 +28,9 @@ class storeController
 
 	static function actionBest()
 	{
-		echo "Best buy action";
-		// require_once(ROOT.'/Views/Store/store_view.php');
+		$products = array();
+		$products = Product::get_list_products();
+		require_once(ROOT.'/Views/Store/best_buy_view.php');
 	}	
 
 }

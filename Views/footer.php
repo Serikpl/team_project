@@ -1,6 +1,6 @@
-    <div class="container-fluid">
+    <div class="container-fluid footer-wrapper">
         <div class="footer">
-            <a href="">Browse shop</a>
+            <a href="/store">Browse shop</a>
         </div>
         <div class="footer-top">
             <ul class="bottom-list">
@@ -19,5 +19,48 @@
             <li><i class="sm"></i></li>
         </ul>
     </div>
+
+<!-- SCRIPTS -->
+<script type="application/x-javascript">
+    addEventListener("load", function() {
+        setTimeout(hideURLbar, 0);
+    }, false);
+
+    function hideURLbar() {
+        window.scrollTo(0, 1);
+    }
+
+</script>
+<script src="/assets/js/jquery-1.11.0.min.js?ver=1"></script>
+<script src="/assets/js/responsiveslides.min.js"></script>
+<script src="/assets/js/easyResponsiveTabs.js" ></script>
+<script src="/assets/js/jquery.flexisel.js"></script>
+<script src='/assets/js/animations.js?ver=3'></script>    
+    
+    <!-- AJAX add to cart product -->
+    <script>
+        $(document).ready(function(){
+            $('.add-to-cart').click(function(){
+
+                var id_p = $(this).attr('data-id');
+               
+                $.post('/cart/add/'+id_p, {}, function(data){
+                    $('#cart-number').html(data);
+                    console.log(data);
+                });
+                return false;
+            });
+        });
+    </script>   
+
+<!-- navigation menu -->
+<script>
+    $( "span.menu" ).click(function() {
+        $( ".navigation ul.navig" ).slideToggle( "slow", function() {
+        // Animation complete.
+        });
+    });
+</script>
+
 </body>
 </html>

@@ -1,12 +1,6 @@
-<?php include ROOT.'/Views/header.php'; ?>
-
-    <!-- here start main section -->
-
-    <!-- main -->
-    <div class="about">
-
-    <?php include ROOT.'/Views/sidebar.php'; ?>
-
+<?php require_once('page_parts/header.php'); ?>
+<div class="about">
+    <?php require_once('page_parts/sidebar.php'); ?>
     <div class="new-product">
         <div class="new-product-top">
             <ul class="product-top-list">
@@ -19,24 +13,55 @@
         </div>
         <div class="new-topday">
             <h3 class="new-models">Today Releases</h3>
-
-            <?php 
-                foreach ($products as $row) 
-                {        
-            ?>  
-            <a href="/product/<?php echo $row['productCode']; ?>">
-           
+            <a href="single.php">
                 <div class="today-new-left">
-                    <img src="/<?php echo $row['main_img']; ?>" class="img-responsive">
+                    <img src="images/offer.jpg" class="img-responsive">
                     <div class="sale-box">
                         <span class="on_sale title_shop">New</span>
                     </div>
                 </div>
-            
             </a>
-            <?php } ?>
 
-
+            <a href="single.php">
+                <div class="today-new-left">
+                    <img src="images/offer2.jpg" class="img-responsive">
+                    <div class="sale-box">
+                        <span class="on_sale title_shop">New</span>
+                    </div>
+                </div>
+            </a>
+            <a href="single.php">
+                <div class="today-new-left">
+                    <img src="images/offer3.jpg" class="img-responsive">
+                    <div class="sale-box">
+                        <span class="on_sale title_shop">New</span>
+                    </div>
+                </div>
+            </a>
+            <a href="single.php">
+                <div class="today-new-left">
+                    <img src="images/bb1.jpg" class="img-responsive">
+                    <div class="sale-box">
+                        <span class="on_sale title_shop">New</span>
+                    </div>
+                </div>
+            </a>
+            <a href="single.php">
+                <div class="today-new-left">
+                    <img src="images/bb2.jpg" class="img-responsive">
+                    <div class="sale-box">
+                        <span class="on_sale title_shop">New</span>
+                    </div>
+                </div>
+            </a>
+            <a href="single.php">
+                <div class="today-new-left">
+                    <img src="images/bb3.png" class="img-responsive">
+                    <div class="sale-box">
+                        <span class="on_sale title_shop">New</span>
+                    </div>
+                </div>
+            </a>
             <div class="clearfix"></div>
         </div>
         <h3 class="new-models">New Models</h3>
@@ -45,22 +70,22 @@
                 <ul id="flexiselDemo3">
                     <li>
                         <div class="biseller-column">
-                            <img src="/assets/images/sm1.jpg" alt="">
+                            <img src="images/sm1.jpg" alt="">
                         </div>
                     </li>
                     <li>
                         <div class="biseller-column">
-                            <img src="/assets/images/sm3.jpg" alt="">
+                            <img src="images/sm3.jpg" alt="">
                         </div>
                     </li>
                     <li>
                         <div class="biseller-column">
-                            <img src="/assets/images/sm4.jpg" alt="">
+                            <img src="images/sm4.jpg" alt="">
                         </div>
                     </li>
                     <li>
                         <div class="biseller-column">
-                            <img src="/assets/images/sm1.jpg" alt="">
+                            <img src="images/sm1.jpg" alt="">
                         </div>
                     </li>
                 </ul>
@@ -72,22 +97,22 @@
                 <ul id="flexiselDemo1">
                     <li>
                         <div class="biseller-column">
-                            <img src="/assets/images/sm1.jpg" alt="">
+                            <img src="images/sm1.jpg" alt="">
                         </div>
                     </li>
                     <li>
                         <div class="biseller-column">
-                            <img src="/assets/images/sm3.jpg" alt="">
+                            <img src="images/sm3.jpg" alt="">
                         </div>
                     </li>
                     <li>
                         <div class="biseller-column">
-                            <img src="/assets/images/sm4.jpg" alt="">
+                            <img src="images/sm4.jpg" alt="">
                         </div>
                     </li>
                     <li>
                         <div class="biseller-column">
-                            <img src="/assets/images/sm1.jpg" alt="">
+                            <img src="images/sm1.jpg" alt="">
                         </div>
                     </li>
                 </ul>
@@ -98,7 +123,4 @@
     </div>
     <div class="clearfix"></div>
 </div>
-<!-- section products on main -->
-
-
-<?php include ROOT.'/Views/footer.php'; ?>
+<?php require_once('page_parts/footer_js.php'); ?>

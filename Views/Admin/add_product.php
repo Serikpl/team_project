@@ -42,9 +42,9 @@
 
 			<label>Recommended: </label><br>
 			<label for="yes_recom">Yes</label>
-			<input name="recommended" id="yes_recom" type="radio" value="true">
+			<input name="recommended" id="yes_recom" type="radio" value="1">
 			<label for="no_recom">No</label>
-			<input name="recommended" id="no_recom" type="radio" value="false"><br />
+			<input name="recommended" id="no_recom" type="radio" value="0"><br />
 
 			<label>Diameter</label><br />
 			<input name="diameter" type="number" placeholder="diameter"><br />
