@@ -74,6 +74,7 @@ background: url(../images/grid_view.png)no-repeat;
 	border-radius: 2px;
 	margin: 20px 0 0;
 	display: inline-block;
+	-webkit-transition: background 0.2s;
 	transition: background 0.2s;
 	font-size: 0.8125em;
 }
@@ -215,12 +216,12 @@ background: url(../images/grid_view.png)no-repeat;
 }
 @media (max-width:480px){
 	.cbp-vm-view-grid ul li {
-		width: 49%;
+		width:100%;
 	}
 }
 @media (max-width:320px){
 .cbp-vm-view-grid ul li {
-	width: 74.5%;
+	width: 100%;
 }
 .cbp-vm-view-list .cbp-vm-details {
 	width:30%;
