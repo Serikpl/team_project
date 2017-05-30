@@ -8,6 +8,14 @@
 <body>
     <div class="container">
 
+		<ul>
+			<li><a href="/ad/products">Products</a></li>
+			<li><a href="/ad/categories">Categories</a></li>
+			<li><a href="/ad/users">Users</a></li>
+			<li><a href="/ad/Orders">Orders</a></li>
+			<li><a href="/ad/statistics">Statistics</a></li>
+		</ul>
+
 		<h1>Products</h1>
 		<div class="row">
 		<p>

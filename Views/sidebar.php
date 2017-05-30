@@ -2,14 +2,22 @@
     <div class="product-listy">
         <h3>Our Products</h3>
         <ul class="product-list">
-            <li><a href="">New Products</a></li>
-            <li><a href="">Old Products</a></li>
-            <li><a href="">Sports</a></li>
-            <li><a href="">Clasical</a></li>
-            <li><a href="">New trend</a></li>
-            <li><a href="">New Release</a></li>
-            <li><a href="login.php">Log In</a></li>
-            <li><a href="register.php">Register</a></li>
+            <?php foreach ($brands as $row) { 
+
+                if($row['brand_name'] == $brand_selected):?>
+                    <li class="but-black active-brand">
+                <?php else: ?>
+                    <li class="but-black">
+                <?php endif; ?>      
+                    <a href="/brand/<?php echo $row['id']; ?>">
+                        <?php echo $row['brand_name']; ?>
+                    </a>
+                    </li>
+
+            <?php } ?>
+                <!-- <li class="but-black"> -->
+                <!-- <a href="../../">ALL BRANDS</a> -->
+                <!-- </li> -->
         </ul>
     </div>
     <div class="latest-bis">

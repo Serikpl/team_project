@@ -30,6 +30,8 @@ class storeController
 	{
 		$products = array();
 		$products = Product::get_list_products();
+		$brands = Brand::getListBrands();
+		$brand_selected = "";
 		require_once(ROOT.'/Views/Store/best_buy_view.php');
 	}	
 

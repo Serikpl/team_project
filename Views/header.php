@@ -26,6 +26,39 @@
 </head>
 <body>
 <!-- Header Starts Here -->
+<div class="user_menus">
+    <ul>
+        <?php 
+            
+            $user = false;
+            $user = User::checkLogged();
+            // var_dump($user);
+            if(!$user){
+        ?>
+            <li>
+                <a href="/login">
+                login
+                </a>
+            </li>
+            <li>
+                <a href="/register">
+                registration
+                </a>
+            </li>
+        <?php } else { ?>
+            <li>
+                <a href="#">
+                    You logined!
+                </a>
+            </li>
+            <li>
+                <a href="/logout">
+                    logout
+                </a>
+            </li>
+        <?php } ?>
+    </ul>
+</div>
 <div class="header">
     <div class="container-fluid">
         <div class="header-top clearfix">

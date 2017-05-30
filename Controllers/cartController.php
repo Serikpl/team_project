@@ -29,7 +29,7 @@ class cartController
 	{	
 		Cart::delProd($id);
 
-		header('Location: /cart/');
+		header('Location: /cart');
 	}
 
 }
