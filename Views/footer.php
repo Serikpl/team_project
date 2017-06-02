@@ -50,6 +50,16 @@
             });
             return false;
         });
+
+        $('.admin_menu li').click(function(){
+
+            var clicked_class = $(this).attr('class');
+
+            console.log(clicked_class);
+            // clicked_class = 'active';
+
+            return false;
+        });
     });
 
 </script>

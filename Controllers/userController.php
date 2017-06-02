@@ -3,7 +3,7 @@
 /**
 * user Controller
 */
-class userController{
+class userController extends AdminBase{
 
 	static public function actionLogin()
 	{
@@ -45,6 +45,64 @@ class userController{
 
 	}
 
+	static public function actionLoginAdmin()
+	{
+
+		$errors = false;
+
+		if(User::checkLogged() && User::checkLoggedType() == 'admin')
+		{
+			header("Location: /ad/products");
+		}
+		else
+		{
+			$email='';
+			$password='';
+			$logined = false;
+
+			if(isset($_POST['submit']))
+			{
+				$email = $_POST['adlogin'];
+				$password = $_POST['adpas'];
+
+				// make method to check validate Name, Email, Password
+				// var_dump($email, $password);
+				// array $errors[] 
+			
+				// check if email exist 
+				$user_id = User::checkUserExist($email, $password);
+				if($user_id == false)
+				{	
+					$errors[0] = "Not correct data!";
+				}
+
+				// check if user admin
+				$check_admin = User::checkUserAdmin($email);
+				if($check_admin == false)
+				{
+					$errors[1] = "You not admin! <br>";
+				}
+				
+				if($errors == false)
+				{
+					User::loginUser($user_id);
+					header("Location: /ad/products");
+				}
+				else
+				{
+					require_once(ROOT.'/Views/Admin/ad_login.php');
+				}
+
+			}	
+
+			require_once(ROOT.'/Views/Admin/ad_login.php');	
+
+		}
+
+		return true;	
+
+	}
+
     public function actionLogout()
     {
 
@@ -55,18 +113,17 @@ class userController{
 	static public function actionRegister()
 	{
 
+		$communicats = '';
 		$name='';
 		$email='';
 		$password='';
+		$user_type = 'user';
 
 		if(isset($_POST['submit']))
 		{
 			$name = $_POST['name'];
 			$email = $_POST['email'];
 			$password = $_POST['password'];
-			$group = 'user';
-			
-			// $today = getdate();
 
 // make method to check validate Name, Email, Password
 			
@@ -82,9 +139,16 @@ class userController{
 			}
 
 			if($errors == false)
-			User::registerUser($name, $email, $password);
+			$check = User::registerUser($name, $email, $password, $user_type);
+
+			if($check)
+			{
+				$communicats = "New user was registered!";
+			}
 
 		}
+
+
 
 		require_once(ROOT.'/Views/User/register.php');
 

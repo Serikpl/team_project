@@ -15,6 +15,12 @@ class startController
 
 		require_once(ROOT.'/Views/Start/index.php');		
 	}	
+
+	static public function actionTest()
+	{
+		require_once(ROOT.'/Views/Static/for_tests.php');	
+	}
+
 }
 
- ?>
+?>

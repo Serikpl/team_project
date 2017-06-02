@@ -32,7 +32,7 @@
             
             $user = false;
             $user = User::checkLogged();
-            // var_dump($user);
+
             if(!$user){
         ?>
             <li>
@@ -48,15 +48,16 @@
         <?php } else { ?>
             <li>
                 <a href="#">
-                    You logined!
+                    Hey, <?php echo User::getLogedName(); ?>, you logged!
                 </a>
             </li>
             <li>
                 <a href="/logout">
-                    logout
+                    log out
                 </a>
             </li>
         <?php } ?>
+        <!-- <li><a><?php echo date('d-m-Y'); ?></a></li> -->
     </ul>
 </div>
 <div class="header">

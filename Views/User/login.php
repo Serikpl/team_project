@@ -32,7 +32,7 @@
                         ?>
                     </div>
 
-                    <form action="#" method="post">
+                    <form action="#" method="post" class="form_r">
                         <div>
                             <span>Email Address<label>*</label></span>
                             <input type="email" name="email" placeholder="email" required>

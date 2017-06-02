@@ -39,7 +39,7 @@ class Router
 			// must be double brackets because if we use this single brackets '' var not will give value
 			if(preg_match("~$keyPattern~", $uri))
 			{
-
+				// echo "http://".$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI']; 
 				// preg_replace() - Perform a regular expression search and replace
 				// Get the inner path from the outside according to the rule.
 				$internalRoute = preg_replace("~$keyPattern~", $inner_path, $uri);
@@ -56,7 +56,7 @@ class Router
 				$parametrs = $segment;
 
 				// set var controller's name
-				$controlFile =  ROOT.'/controllers/'.$controlName.'.php';
+				$controlFile =  ROOT.'/Controllers/'.$controlName.'.php';
 
 				// check if this file exist
 				if(file_exists($controlFile))

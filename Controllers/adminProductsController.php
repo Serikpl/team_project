@@ -1,23 +1,27 @@
 <?php
 
 
-class adminController 
+class adminProductsController extends AdminBase
 {
 
 	static public function actionIndex()
 	{
 
+		self::checkAdmin();
+
 		$products = array();
 		$products = Product::get_list_products();
 		
-		require_once(ROOT.'/Views/Admin/index.php');
+		require_once(ROOT.'/Views/Admin/Products/index.php');
 		
 	}
 
 
 
-	static public function actionAdd_product()
+	static public function actionAddProduct()
 	{
+		self::checkAdmin();
+
 		$products = array();
 		$products = Product::get_list_products();
 	
@@ -196,13 +200,15 @@ class adminController
 
 		echo "</pre>";
 
-		require_once(ROOT.'/Views/Admin/add_product.php');
+		require_once(ROOT.'/Views/Admin/Products/add_product.php');
 	
 	}// end actionAdd_product()
 
 	// delete product
-	static public function actionRemove_prod($id)
+	static public function actionRemoveProd($id)
 	{
+
+		self::checkAdmin();
 
 		$result_d = Product::remove_prod($id);
 
@@ -211,8 +217,9 @@ class adminController
 	}
 
 	//	edition product 
-	static public function actionEdit_prod($id)
+	static public function actionEditProd($id)
 	{
+		self::checkAdmin();
 
 		$data = Product::get_one_product($id);
 
@@ -303,7 +310,7 @@ class adminController
 			}
 		}
 
-		require_once(ROOT.'/Views/Admin/edit_prod.php');
+		require_once(ROOT.'/Views/Admin/Products/edit_prod.php');
 
 	}/*end action edit_prod*/
 

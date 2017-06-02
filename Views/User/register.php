@@ -14,7 +14,7 @@
 				 <h3 class="new-models">For New Customers</h3>
 				 <div class="register">
 
-				  	<form action="#" method="post"> 
+				  	<form action="#" method="post" class="form_r"> 
 
 							<h3>REGISTRATION</h3>
 
@@ -24,31 +24,28 @@
 									{
 										echo $errors[0]; 										
 									} 
+
+									if(!empty($communicats))
+									{
+										echo $communicats;
+									}
 								?>
 							</div>
 
 							<div>
-								<span>Name<label>*</label></span>
-								<input type="text" name="name" placeholder="name" required> 
+								<span>Name<label>*</label></span><br>
+								<input type="text" name="name" placeholder="name" required>
 							</div>
+
 							<div>
-								<span>Email (Login)<label>*</label></span>
-								<input type="email" name="email" placeholder="email" required> 
+								<span>Email (Login)<label>*</label></span><br>
+								<input type="email" name="email" placeholder="email" required> 							</div>
+
+							<div>
+								<span>Password<label>*</label></span><br>
+								<input type="password" name="password" placeholder="password" required> 
 							</div>
-							<div class="clearfix"> </div>
-							   	<!-- <a class="news-letter" href="#">
-								 <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> </i>Sign Up for Newsletter</label>
-							   	</a> -->
 
-
-									 <div>
-										<span>Password<label>*</label></span>
-										<input type="password" name="password" placeholder="password" required> 
-									 </div>
-<!-- 									 <div>
-										<span>Confirm Password<label>*</label></span>
-										<input type="password">
-									 </div> -->
 		
 						<div class="register-but">
 							<input type="submit" name="submit" value="submit">
