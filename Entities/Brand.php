@@ -44,4 +44,42 @@ class Brand
 		return $data;
 	}
 
+	public static function addNewBrand($name_new_brand)
+	{
+
+		$pdo = Database::connect();
+		$sql = "INSERT INTO brands(id, brand_name) value(?,?)";
+
+		$query = $pdo->prepare($sql);
+
+		try{
+			$result = $query->execute(array("",$name_new_brand));
+		} catch(PDOExeption $e)
+		{
+			echo $e->getMessage();
+		}
+
+		Database::disconnect();
+
+		return $result;
+
+	}
+
+	public static function removeBrand($id)
+	{
+		
+		$pdo = Database::connect();
+
+		$sql = 'DELETE FROM brands WHERE id = ?';
+
+		$query = $pdo->prepare($sql);
+
+		$check = $query->execute(array($id));
+
+		Database::disconnect();
+
+		return $check;
+
+	}
+
 }

@@ -70,6 +70,18 @@ class Cart
 		// return $_SESSION['products'];
 	}
 
+	static public function delAllProducts()
+	{
+		if(isset($_SESSION['products']))
+		{
+			foreach ($_SESSION['products'] as $key => $value) {
+				unset($_SESSION['products'][$key]);
+			}
+		}
+
+		return true;
+	}
+
 	static public function getTotalPrice()
 	{
 		$common_price = 0;
