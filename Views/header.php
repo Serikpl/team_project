@@ -70,10 +70,10 @@
             <div class="clear"></div>
             <div class="navigation">
                 <ul class="navig">
-                    <li><a href="/store">Bikes</a></li>
-                    <li><a href="/best">Best Buy</a></li>
-                    <li><a href="/store">Offers</a></li>
-                    <li><a href="/best">Accessories</a></li>
+                    <li><a href="/best">Shop</a></li>
+                    <li><a href="/store">Best Buy</a></li>
+<!--                     <li><a href="/store">Offers</a></li>
+                    <li><a href="/best">Accessories</a></li> -->
                     <li><a href="/contact">Contact</a></li>
                     <li><a href="/aboutus">About Us</a></li>
                     <li><a href="/cart" >

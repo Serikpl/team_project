@@ -3,17 +3,17 @@
 
 
 echo "<pre><br>";
-// print_r(expression);
+print_r($return_arr);
 echo "</pre><br>";
 
 
 echo "<pre><br>";
-// var_dump($sessionArray);
+// var_dump($data);
 echo "</pre><br>";
 
 
 echo "<pre><br>";
-echo $errors;
+// echo $return_arr;
 echo "</pre><br>";
 
 

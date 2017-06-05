@@ -46,20 +46,28 @@
 
             $.post('/cart/add/' + id_p, {}, function(data) {
                 $('#cart-number').html(data);
-                console.log(data);
+                // console.log(data);
             });
             return false;
         });
 
+        // active class of menu
         $('.admin_menu li').click(function(){
 
             var clicked_class = $(this).attr('class');
 
-            console.log(clicked_class);
+            // console.log(clicked_class);
             // clicked_class = 'active';
 
             return false;
         });
+
+
+            // $.post('/ad/stat/amounts', {}, function(data) {
+            //     $('#date_statisctics').html(data);
+            //     console.log(data);
+            // });
+
     });
 
 </script>

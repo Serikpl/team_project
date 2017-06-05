@@ -23,18 +23,22 @@
             <?php 
                 foreach ($products as $row) 
                 {        
+                    if($row['its_recommended'] == 1){ 
             ?>  
+            
             <a href="/product/<?php echo $row['productCode']; ?>">
            
                 <div class="today-new-left">
                     <img src="/<?php echo $row['main_img']; ?>" class="img-responsive">
                     <div class="sale-box">
-                        <span class="on_sale title_shop">New</span>
+                        <span class="on_sale title_shop">Recommended</span>
                     </div>
                 </div>
             
             </a>
-            <?php } ?>
+            <?php 
+                    }
+                } ?>
 
 
             <div class="clearfix"></div>

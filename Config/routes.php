@@ -36,6 +36,11 @@ return array(
 	'ad/orders/add_order' => 'adminOrders/AddOrder', // adminController add brand action	
 	'ad/orders' => 'adminOrders/index', // admine/products index
 
+	// admin/statistics
+	// HERE cuold be write new routes for statisctics (belowe example)
+	'ad/stat/amounts' => 'adminStatistics/amountsJSON', // admine/products index
+	'ad/stat' => 'adminStatistics/index', // admine/products index
+
 	'ad' => 'user/loginAdmin', // admine/products index
 
 	// store
