@@ -5,8 +5,7 @@
     <!-- main -->
     <div class="about">
 
-    <?php include ROOT.'/Views/sidebar.php'; ?>
-        <div class="new-product">
+        <div class="new-product w100">
         <div class="new-product-top">
             <ul class="product-top-list">
                 <li><a href="index.php">Home</a>&nbsp;<span>&gt;</span></li>

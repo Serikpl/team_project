@@ -2,7 +2,7 @@
 
 <div class="about">
 
-    <div class="new-product login-page prodys">
+    <div class="new-product w100 prodys">
         <div class="new-product-top">
             <ul class="product-top-list">
                 <li><a href="index.php">Home</a>&nbsp;<span>&gt;</span></li>

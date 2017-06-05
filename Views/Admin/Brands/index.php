@@ -16,7 +16,7 @@
                         <table cellpadding="0" cellspacing="0">
                             <tr>
                                 <th>id</th>
-                                <th>nazwa kategii</th>
+                                <th>nazwa kategorii</th>
                                 <th>opcje</th>
 
                             </tr>

@@ -8,21 +8,17 @@ echo "</pre><br>";
 
 
 echo "<pre><br>";
-// var_dump(expression);
+// var_dump($sessionArray);
 echo "</pre><br>";
 
 
 echo "<pre><br>";
-// echo "string";
+echo $errors;
 echo "</pre><br>";
 
 
 
-
- ?>
-  <?php 
-  
-  // Создание класса Password для управления: 
+ // Создание класса Password для управления: 
   
   // class Password { 
   		
@@ -40,26 +36,26 @@ echo "</pre><br>";
   // } 
 
 
- class Password 
- { 
- 	public static function hash($password) 
- 	{ 
- 		return password_hash($password, PASSWORD_DEFAULT, ['cost' => 14]); 
- 	} 
+//  class Password 
+//  { 
+//  	public static function hash($password) 
+//  	{ 
+//  		return password_hash($password, PASSWORD_DEFAULT, ['cost' => 14]); 
+//  	} 
 
- 	public static function verify($password, $hash) 
- 	{ 
- 		return password_verify($password, $hash); 
- 	} 
-}
+//  	public static function verify($password, $hash) 
+//  	{ 
+//  		return password_verify($password, $hash); 
+//  	} 
+// }
 
-  // Хеширование пароля: 
-  $hash = Password::hash('root'); 
-  var_dump($hash);
-  // Проверка по введенному паролю (В этом примере верификация закончится неудачей) 
-  if (Password::verify('root', $hash)) 
-  	{ echo 'Correct Password!\n'; } 
-  else 
-  	{ echo "Incorrect login attempt!\n"; }
+//   // Хеширование пароля: 
+//   $hash = Password::hash('root'); 
+//   var_dump($hash);
+//   // Проверка по введенному паролю (В этом примере верификация закончится неудачей) 
+//   if (Password::verify('root', $hash)) 
+//   	{ echo 'Correct Password!\n'; } 
+//   else 
+//   	{ echo "Incorrect login attempt!\n"; }
 
  

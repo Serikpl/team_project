@@ -31,6 +31,11 @@ return array(
 	'ad/users/add_user' => 'adminUsers/AddUser', // adminController add brand action	
 	'ad/users' => 'adminUsers/index', // admine/products index
 
+	// admin/orders
+	'ad/orders/remove_order/([0-9]+)' => 'adminOrders/removeOrder/$1', // adminController remove_prod action
+	'ad/orders/add_order' => 'adminOrders/AddOrder', // adminController add brand action	
+	'ad/orders' => 'adminOrders/index', // admine/products index
+
 	'ad' => 'user/loginAdmin', // admine/products index
 
 	// store

@@ -9,7 +9,7 @@
                     <h1>Products in Cart</h1>
                     <div class="products row">
                         <div class="shopping-cart-wrapper">
-                            <div class="shopping-cart-list">
+                            <div class="shopping-cart-list">            
 
                                 <?php foreach ($products as $row):?>
 
