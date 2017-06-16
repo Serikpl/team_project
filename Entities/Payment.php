@@ -52,6 +52,28 @@ class Payment
 
 	}	
 
+	public static function editOrder($status, $id)
+	{
+		$pdo = Database::connect();
+
+		$sql = "UPDATE orders SET status = ?  WHERE id = ?";
+		$query = $pdo->prepare($sql);
+
+		try{
+			$ch = $query->execute(array($status, $id));
+
+			var_dump($ch);
+		
+		} catch(PDOException $e)
+		{
+			echo $e->getMessage();
+		}	
+
+		Database::disconnect();		
+
+		return $ch;
+	}
+
 	public static function saveOrderDetails($order_id, $product_id, $quantity, $price, $brand_id)
 	{
 

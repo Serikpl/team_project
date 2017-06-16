@@ -113,7 +113,30 @@ class User
 		return $data; 	
     }
 
-	public static function registerUser($name, $email, $password, $user_type = "admin")
+    public static function getOneUser($id)
+    {
+		$pdo = Database::connect();
+
+		$sql = 'SELECT * FROM users WHERE id=?';
+		$query = $pdo->prepare($sql);		
+
+		try{
+			$query->execute(array($id));
+		}
+		catch(PDOexeption $e)
+		{
+			echo $e->getMessage;
+		}
+
+		// fetchAll(PDO::FETCH_ASSOC);
+		$data = $query->fetch(PDO::FETCH_ASSOC);
+
+		Database::disconnect();   
+		
+		return $data; 	
+    }
+
+	public static function registerUser($name, $email, $password, $user_type = "user")
 	{
 
 		// date now
@@ -122,6 +145,7 @@ class User
 		// user type 
 		// $user_type = "admin";
 
+		// make a password hash
 		$password = self::make_password_hash($password);
 
 		$pdo = Database::connect();
@@ -142,6 +166,28 @@ class User
 
 		return $check;
 
+	}
+
+	public static function editUser($id, $name, $email, $password, $user_type)
+	{
+		$pdo = Database::connect();
+
+		$sql = "UPDATE users SET name = ?, email = ?, password = ?, user_type = ?  WHERE id = ?";
+		$query = $pdo->prepare($sql);
+
+		try{
+			$ch = $query->execute(array($name, $email, $password, $user_type, $id));
+
+			var_dump($ch);
+		
+		} catch(PDOException $e)
+		{
+			echo $e->getMessage();
+		}	
+
+		Database::disconnect();	
+
+		return $ch;	
 	}
 
 	public static function checkEmailExist($email)
@@ -204,6 +250,7 @@ class User
 	
 		$hash = $user['password'];
 
+		// verify password hash
 		$result = self::verify_password_hash($password, $hash);
 		
 		Database::disconnect();	

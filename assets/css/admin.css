@@ -9,19 +9,30 @@
 pre{
     color: #000;
 }
-
+.stat_2{
+    margin-left: 10%;
+}
+.stat_1,.stat_2{
+    width: 45%;
+    height: auto;
+    float: left;
+    background: rgba(255,255,255,0.9);
+}
 .container {
     max-width: 1320px;
     width: 100%;
     margin: 0 auto;
 }
+.statistics{
 
+}
 header {
     height: 50px;
     background: #22313F;
 }
 
 .admin-category {
+    padding-bottom: 50px;
     overflow: hidden;
     border-radius: 5px;
     margin-top: 40px;

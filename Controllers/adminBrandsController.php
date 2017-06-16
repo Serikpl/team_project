@@ -4,8 +4,6 @@
 class adminBrandsController extends AdminBase
 {
 
-	
-
 	static public function actionIndex()
 	{
 		self::checkAdmin();
@@ -18,6 +16,8 @@ class adminBrandsController extends AdminBase
 	static public function actionAddBrand()
 	{
 		self::checkAdmin();
+
+		$check=false;
 
 		if(isset($_POST))
 		{
@@ -42,6 +42,32 @@ class adminBrandsController extends AdminBase
 		$data = Brand::removeBrand($id);
 
 		header('Location: /ad/brands');
+	}
+
+	static public function actionEditBrand($id)
+	{
+		self::checkAdmin();
+
+		$data = Brand::getOneBrand($id);
+
+		$check = false;
+
+		if(!empty($_POST))
+		{
+			$new_name = $_POST['brandName'];
+
+			var_dump($_POST);
+
+			$check = Brand::editBrand($id, $new_name);
+		}				
+	
+		require_once(ROOT.'/Views/Admin/Brands/edit_brand.php');
+
+		if($check)
+		{
+			header('Location: /ad/brands');	
+		}		
+
 	}
 
 }

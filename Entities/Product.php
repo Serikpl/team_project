@@ -51,6 +51,22 @@ class Product
 		return $data;
 	}
 
+	public static function get_recommended_products()
+	{
+
+		$pdo = Database::connect();
+
+		$sql = 'SELECT * FROM products WHERE its_recommended = 1';
+					
+		$data = $pdo->query($sql);
+					
+		$data = $data ->fetchAll(PDO::FETCH_ASSOC);
+
+		Database::disconnect();
+		
+		return $data;		
+	}
+
     /**
      * Delete product
      * @param intege $id

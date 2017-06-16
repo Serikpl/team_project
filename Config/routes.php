@@ -23,23 +23,30 @@ return array(
 
 	// admin/brands
 	'ad/brands/remove_brand/([0-9]+)' => 'adminBrands/removeBrand/$1', // adminController remove_prod action
+	'ad/brands/edit_brand/([0-9]+)' => 'adminBrands/editBrand/$1', // adminController add brand action	
 	'ad/brands/add_brand' => 'adminBrands/AddBrand', // adminController add brand action	
 	'ad/brands' => 'adminBrands/index', // admine/products index
 
 	// admin/users
 	'ad/users/remove_user/([0-9]+)' => 'adminUsers/removeUser/$1', // adminController remove_prod action
+	'ad/users/edit_user/([0-9]+)' => 'adminUsers/editUser/$1', // adminController remove_prod action
 	'ad/users/add_user' => 'adminUsers/AddUser', // adminController add brand action	
 	'ad/users' => 'adminUsers/index', // admine/products index
 
 	// admin/orders
 	'ad/orders/remove_order/([0-9]+)' => 'adminOrders/removeOrder/$1', // adminController remove_prod action
-	'ad/orders/add_order' => 'adminOrders/AddOrder', // adminController add brand action	
+	'ad/orders/edit_order/([0-9]+)' => 'adminOrders/editOrder/$1', // adminController remove_prod action
+	
 	'ad/orders' => 'adminOrders/index', // admine/products index
 
 	// admin/statistics
 	// HERE cuold be write new routes for statisctics (belowe example)
 	'ad/stat/amounts' => 'adminStatistics/amountsJSON', // admine/products index
+	'ad/stat/stat_2' => 'adminStatistics/stat_2JSON', // admine/products index
 	'ad/stat' => 'adminStatistics/index', // admine/products index
+
+
+
 
 	'ad' => 'user/loginAdmin', // admine/products index
 

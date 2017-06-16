@@ -334,6 +334,7 @@ li.rslides1_s3 a {
 
 img.seller-img {
     margin-top: 3em;
+    width: 50%;
 }
 
 .seller-column1 {
@@ -407,6 +408,7 @@ span.sale-nip {
     color: #987f77;
     border: 2px solid #987f77;
     padding: 10px 20px;
+    display: inline;
 }
 
 .price a:hover {

@@ -45,16 +45,19 @@
                     <div class="sale-box">
                         <span class="on_sale title_shop">bestseller</span>
                     </div>
-                    <img src="/assets/images/biscyle1.jpg" alt="" class="seller-img">
+                    <img src="<?php echo $bestsel_prod['main_img']; ?>" alt="" class="seller-img">
                 </div>
                 <div class="seller-column1">
                     <h3>Sale</h3>
                     <span class="sale-nip"></span>
-                    <h4>Bicycle RetroSyperb Vii #1</h4>
-                    <small>by Rodriguez Else</small>
-                    <p>299.99$</p>
+                    <h4>
+                        <a href="product/<?php echo $bestsel_prod['productCode'];?>"><?php echo $bestsel_prod['productName']; ?>
+                        </a>
+                    </h4>
+                    <small>by <?php echo $brand_bs['brand_name']; ?></small>
+                    <p><?php echo $bestsel_prod['buyPrice']; ?>$</p>
                     <div class="price">
-                        <a href="single.php">Add to Shopping bag</a>
+                        <a href="#" data-id='<?php echo $bestsel_prod['productCode']; ?>' class="add-to-cart">Add to Shopping bag</a>
                         <span class="rating">Rating: 5.0 <i class="ratings"></i></span>
                     </div>
                     <p class="customer">Ask the Customer a Question</p>

@@ -21,4 +21,26 @@ class adminOrdersController extends AdminBase
 		header('Location: /ad/orders');
 	}	
 
+	static public function actionEditOrder($id)
+	{
+		self::checkAdmin();
+
+		$check = false;
+
+		if(!empty($_POST))
+		{
+			$status = $_POST['status'];
+
+			$check = Payment::editOrder($status, $id);
+		}
+
+		require_once(ROOT.'/Views/Admin/Orders/edit_order.php');
+
+		if($check)
+		{
+			header('Location: /ad/orders');	
+		}
+		
+	}	
+
 }

@@ -65,6 +65,26 @@ class Brand
 
 	}
 
+	public static function editBrand($id, $new_name)
+	{
+			$pdo = Database::connect();
+
+			$sql = "UPDATE brands SET brand_name = ?  WHERE id = ?";
+			$query = $pdo->prepare($sql);
+
+			try{
+				$ch = $query->execute(array($new_name, $id));
+
+				var_dump($ch);
+		
+			} catch(PDOException $e)
+			{
+				echo $e->getMessage();
+			}	
+
+			Database::disconnect();
+	}
+
 	public static function removeBrand($id)
 	{
 		

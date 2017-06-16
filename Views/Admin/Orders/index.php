@@ -29,7 +29,7 @@
                                 <td><?php echo $row['transaction_id']; ?></td>
 
                                 <td class="opcje">
-                                    <a href="/ad/orders/edit_brand/<?php echo $row['id']; ?>">zarzadzaj</a>
+                                    <a href="/ad/orders/edit_order/<?php echo $row['id']; ?>">zarzadzaj</a>
                                     <a href="/ad/orders/remove_order/<?php echo $row['id']; ?>">usuń</a>
                                 </td>
                             </tr>
